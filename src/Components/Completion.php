@@ -1,6 +1,6 @@
 <?php
 
-namespace Developh\OpenAI\Exceptions\Components;
+namespace Developh\OpenAI\Components;
 
 use Developh\OpenAI\Client;
 use JsonException;

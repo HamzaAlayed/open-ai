@@ -12,10 +12,10 @@ class Client
 
     public function __construct()
     {
-        $this->client = Http::baseUrl(config('services.open_ai.url'))
-            ->withToken(config('services.open_ai.api'))
+        $this->client = Http::baseUrl(config('open-ai.url'))
+            ->withToken(config('open-ai.api'))
             ->withHeaders([
-                'OpenAI-Organization' => config('services.open_ai.organization'),
+                'OpenAI-Organization' => config('open-ai.organization'),
             ])
             ->asJson()
             ->contentType('application/json');

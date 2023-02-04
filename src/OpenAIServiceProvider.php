@@ -20,6 +20,21 @@ class OpenAIServiceProvider extends ServiceProvider
         } else {
             $publishPath = base_path('config/open-ai.php');
         }
+        $this->publishes([$configPath => $publishPath], 'config');
+    }
+
+    /**
+     * Register the service provider.
+     *
+     * @return void
+     */
+    public function register(): void
+    {
+        $this->app->bind('openai', function ($app) {
+            return new Component();
+        });
+        $configPath = __DIR__ . '/../config/open-ai.php';
+        $this->mergeConfigFrom($configPath, 'open-ai');
     }
 
 }
