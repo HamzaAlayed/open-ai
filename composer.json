@@ -1,0 +1,42 @@
+{
+    "name": "developh/open-ai",
+    "description": "Laravel wrapper for OpenAI api, Code Completion, Text Completion and Image generation",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "OpenAI",
+        "ChatGPT",
+        "Code Completion",
+        "Text Completion",
+        "Image generation",
+        "embeddings",
+        "AI models",
+        "fine tuning"
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "friendsofphp/php-cs-fixer": "^2",
+        "illuminate/config": "^8 || ^9 || ^10",
+        "vimeo/psalm": "^5.4"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Developh\\OpenAI\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Developh\\OpenAI\\Tests\\": "tests"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hamza Alayed",
+            "email": "developerh108@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
