@@ -1,7 +1,7 @@
 # OpenAI wrapper for Laravel
 
 
-** Environment variables
+#### Environment variables
 
 
 `OPENAI_API_URL=https://api.openai.com/v1`
@@ -15,6 +15,6 @@ Your [Organization ID]( https://platform.openai.com/account/org-settings)
 `OPENAI_ORGANIZATION=ORGANIZATION-ID`
 
 
-** Text Completion
+#### Text Completion
 
 `OpenAI::textCompletion('Write this is a test');`
