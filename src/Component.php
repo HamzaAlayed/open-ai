@@ -35,12 +35,20 @@ class Component
         return $this;
     }
 
+
+    public function topP(float $topP): Component
+    {
+        $this->completion->topP($topP);
+
+        return $this;
+    }
+
     /**
      * @throws JsonException
      */
-    public function textCompletion(string $prompt, int $maxTokens = 100): object|array
+    public function textCompletion(string $prompt): object|array
     {
-        return $this->completion->text($prompt, $maxTokens);
+        return $this->completion->text($prompt);
     }
 
 }

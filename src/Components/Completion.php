@@ -17,6 +17,8 @@ class Completion extends Client
         parent::__construct();
         $this->model(config('open-ai.model'));
         $this->temperature(config('open-ai.temperature'));
+        $this->length(config('open-ai.length'));
+        $this->topP(config('open-ai.top_p'));
     }
 
     public function model(string $model): Completion
@@ -60,7 +62,7 @@ class Completion extends Client
                 "n" => 1,
                 "stream" => false,
                 "logprobs" => null,
-                "stop" => [""]
+                "stop" => ["{}"]
 
 
             ], JSON_THROW_ON_ERROR),
