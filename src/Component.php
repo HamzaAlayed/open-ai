@@ -21,6 +21,20 @@ class Component
         return $this;
     }
 
+    public function temperature(float $temperature): Component
+    {
+        $this->completion->temperature($temperature);
+
+        return $this;
+    }
+
+    public function length(string $length): Component
+    {
+        $this->completion->length($length);
+
+        return $this;
+    }
+
     /**
      * @throws JsonException
      */
